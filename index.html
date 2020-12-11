@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="menu.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulaire HETIC</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <div class="logo-size">
+                    <img src="assets/logo-hetic.svg" alt="Logo de HETIC">
+                </div>
+            </div>
+            <nav class="navigation">
+                <div class="menu-wrap">
+                    <input type="checkbox" class="toggler">
+                    <div class="hamburger"><div></div></div>
+                    <div class="menu">
+                        <div>
+                            <div>
+                                <ul class="links">
+                                    <li><a href="#formations">Formations</a></li>
+                                    <li><a href="#vie-etud">Vie étudiante</a></li>
+                                    <li><a href="#admissions">Admissions</a></li>
+                                    <li><a href="#telephone">01.76.36.10.07</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="content">
+
+            <section class="welcome">
+                <div id="background-image"></div>
+                <div class="contact-us">
+                    <h1>contactez-nous</h1>
+                    <p> L'équipe d'admission d'Hétic est disponible pour échanger avec vous sur  
+                        votre projet d'orientation lors d'un rendez-vous d'admission à distance
+                    </p>
+                </div>
+
+                <div class="web-school">
+                    <p>é c o l e</p>
+                    <p>d e s</p>
+                    <p>m é t i e r s</p>
+                    <p>d u</p>
+                    <p>w e b</p>
+                </div>
+
+                <div class="social-medias">
+                    <a href="https://www.facebook.com/hetic.net/" target="_blank"><img src="assets/social-medias/facebook.svg" alt="Lien vers facebook"></a>
+                    <a href="https://twitter.com/hetic" target="_blank"><img src="assets/social-medias/twitter.svg" alt="Lien vers twitter"></a>
+                    <a href="https://www.instagram.com/instahetic/" target="_blank"><img src="assets/social-medias/insta.svg" alt="Lien vers instagram"></a>
+                    <a href="https://www.youtube.com/channel/UC_kjt93zZzjK_JxfYTOYWJA" target="_blank"><img src="assets/social-medias/youtube.svg" alt="Lien vers youtube"></a>
+                    <a href="https://www.linkedin.com/school/hetic/" target="_blank"><img src="assets/social-medias/linkedin.svg" alt="Lien vers linkedin"></a>
+                    <a href="https://vimeo.com/hetic" target="_blank"><img src="assets/social-medias/vimeo.svg" alt="Lien vers vimeo"></a>
+                </div>
+            </section>
+
+            <div class="hetic-card">
+                <div class="card1"></div>
+                <div class="card2"></div>
+            </div>
+            
+            <section class="formulaire">
+                <div class="title">
+                    <h2>Demandez un rendez-vous</h2>
+                </div>
+                <div class="form">
+                    <form action="" method="POST">
+                        <div class="input-flex"> 
+                            <div class="raw1">
+                                <div>
+                                    <input id="name" class="text" type="text" required>
+                                    <label for="name" class="label-content">Prénom *</label>
+                                </div>
+                                <div class="second-input">
+                                    <input id="surname" class="text" type="text" required>
+                                    <label for="surname" class="label-content">Nom *</label>
+                                </div>
+                            </div>
+                            <div class="raw2">
+                                <div>
+                                    <input id="phone" class="text" type="text" required>
+                                    <label for="phone" class="label-content">Numéro de téléphone *</label>
+                                </div>
+                                <div class="second-input">
+                                    <input id="company" class="text" type="text" required>
+                                    <label for="company" class="label-content">Société *</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-other">
+                            <div>
+                                <input id="email" class="text" type="text" required>
+                                <label for="email" class="label-content">Adresse e-mail *</label>
+                            </div>
+                            <div>
+                                <input id="subject" class="text" type="text" required>
+                                <label for="subject" class="label-content">Objet *</label>
+                            </div>
+                            <div>
+                                <textarea id="message" class="text" name="message" cols="30" rows="10" required></textarea>
+                                <label for="message" class="label-content">Message *</label>
+                            </div>
+                            
+                            <p class="check">
+                                <input type="checkbox" class="checkbox" id="check">
+                                Dans le cadre de la réglementation sur la protection des données, 
+                                j'accepte d'être contacté(e) par email et téléphone.
+                            </p>
+
+                            <div class="box-btn">
+                                <button class="btn"><p>Je prend rendez-vous</p></button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr class="line">
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-content">
+                    <hr class="line">
+                    <div class="list">
+                        <ul class="more">
+                            <ul class="formations">
+                                <li><h3>Formations</h3></li>
+                                <li><a href="#">Bachelor Webmarketing & UX</a></li>
+                                <li><a href="#">Prépa Mastère Digital</a></li>
+                                <li><a href="#">Mastère Big Data & IA</a></li>
+                            </ul>
+                            <ul class="usefull-links">
+                                <li><h3>Liens utiles</h3></li>
+                                <li><a href="#">Insertions</a></li>
+                                <li><a href="#">L'école</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="school">
+                                <li><a href="#">Grande École</a></li>
+                                <li><a href="#">Bachelor Développeur Web</a></li>
+                            </ul>
+                        </ul>
+                        <div class="brand">
+                            <div class="footer-logo">
+                                <img src="assets/logo-hetic_white.svg" alt="Logo d'HETIC">
+                            </div>
+                            <div class="copyright">
+                                <div class="copyright-text">
+                                    <p>© 2020, Tous droits résérvés</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </footer>
+
+        </main>
+    </body>
+</html>

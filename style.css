@@ -1,0 +1,613 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --main-color: #292D51;
+    --hetic-color: #00ca91;
+}
+
+*::selection{
+    background: #000;
+    color: var(--hetic-color);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Barre de navigation */
+header{
+    display: flex;
+    position: fixed;
+    height: 73px;
+    width: 100%;
+    background-color: #fff;
+    justify-content: space-between;
+    z-index: 10;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Logo du header */
+header .logo-size{
+    width: 137px;
+    margin-left: 20px;
+    min-width: 137px;
+}
+
+header .logo-size img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Contenu de la page */
+.content{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 73px;
+    width: 100%;
+}
+
+/* On place le premier contenu en relatif pour placer les éléments facilement dedans */
+.welcome{
+    width: 100%;
+    position: relative;
+    height: calc(100vh - 73px);
+}
+
+/* Image de fond d'accueil */
+#background-image{
+    /* Image avec un dégradé par dessus. On centre l'image et on la fait couvrir tous le fond*/
+    background: linear-gradient(to left, black 11%, rgba(0,0,0,0)), no-repeat center center/cover url("assets/startup-593296.jpg");
+    height: calc(100vh - 73px);
+    z-index: 0;
+}
+
+/* Texte d'accueil centré verticalement */
+.contact-us{
+    position: absolute;
+    top: calc(50% - calc(180px / 2));
+    padding-left: 28px;
+    color: #fff;
+    width: calc(100% - 100px);
+}
+
+/* Titre du texte d'accueil */
+.contact-us h1{
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+/* Paragraphe du texte d'accueil */
+.contact-us p{
+    font-size: 18px;
+    max-width: 80%;
+    font-weight: lighter;
+    line-height: 1.5em;
+}
+
+/* Texte vertical géré comme j'ai pu */
+.web-school{
+    position: absolute;
+    width: 20px;
+    top: 0;
+    right: 0;
+    margin: 10px 5%;
+    text-transform: uppercase;
+}
+
+.web-school p{
+    font-size: 20px;
+    color: #fff;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Réseaux sociaux au bas de l'écran d'accueil */
+.social-medias{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 35px;
+    width: 80%;
+    margin-bottom: 35px;
+    padding: 0 5%;
+    justify-content: flex-end;
+}
+
+.social-medias a{
+    margin-left: 4%;
+}
+
+.social-medias a img{
+    transition: opacity ease 0.3s ;
+    width: 35px;
+}
+
+.social-medias a img:hover{
+    opacity: 0.4;
+}
+
+/* Formulaire de demande de rendez-vous */
+.formulaire{
+    padding: 40px 20px 30px 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Titre du formulaire */
+.formulaire .title{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    width: 274px;
+}
+
+/* Texte du titre */
+.title h2{
+    color: var(--main-color); 
+    font-size: 30px;
+    font-weight: 400;
+}
+
+/* Largeur du formulaire */
+.form{
+    width: 100%;
+}
+
+/* Disposition en colonne du formulaire */
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style des input et textarea */
+.text{
+    width: 100%;
+    height: 50px;
+    padding-left: 3%;
+    border: solid 0.5px #b1bccf;
+    font-size: 16px;
+    color: #54688b;
+}
+
+.text:not(:focus):valid ~ label{
+    /* background-color: rgba(0, 0, 0, 0);
+    transform: translateY(-20px)  translateX(-75px);
+    opacity: 0;
+    font-size: 5px; */
+    transition: all 0.3s ease;
+    font-size: 12px;
+    top: -7px;
+    padding: 0 3px;
+    left: 1%;
+    color: #b1bccf;
+}
+
+/* petite modification sur le textarea */
+textarea.text{
+    height: 250px;
+    padding-top: 3%;
+    resize: none;
+}
+
+.raw1 div,
+.raw2 div,
+.form-other div{
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.label-content{
+    position: absolute;
+    top: 15px;
+    left: 3%;
+    height: 20px;
+    color: #b1bccf;
+    background-color:white;
+    transition: all 0.1s ease;
+}
+
+.raw1 div .text:focus ~ .label-content,
+.raw2 div .text:focus ~ .label-content,
+.form-other div .text:focus ~ .label-content {
+    font-size: 12px;
+    top: -7px;
+    padding: 0 3px;
+    left: 1%;
+    color: var(--hetic-color);
+}
+
+/* Couleur du positionnement de la souris */
+.text:focus{
+    outline: none;
+    border: solid 0.5px var(--hetic-color);
+}
+
+/* Style de la réglementation */
+form .check{
+    color: #54688b;
+    font-size: 16px;
+}
+
+/* Style de la réglementation */
+form .check{
+    color: #54688b;
+    font-size: 16px;
+}
+
+/* Taille du bouton */
+.box-btn{
+    height: 50px;
+    margin: 30px 0;
+}
+
+/* Style du bouton */
+.box-btn .btn{
+    background-color: var(--hetic-color);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+/* Style du bouton */
+.box-btn .btn:hover::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    opacity: 0.5;
+    animation: 1.5s linear infinite filter;
+}
+
+/* Ligne de séparation */
+.line{
+    background-color: #d7e0ef;
+    border: none;
+    height: 1px;
+    width: 100%;
+}
+
+/* Bas de page */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-color);
+    color: #ccc;
+    padding: 20px 0 30px 0;
+}
+
+/* Taille du contenu */
+.footer-content{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ligne de séparation */
+.footer-content .line{
+    margin: 20px 0 40px 0;
+    background-color: #646aad;
+}
+
+/* Liste des différents liens */
+.list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Centrage des liens */
+.more{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Style des titres des liens */
+.more h3{
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Style des sections de liens */
+.more .formations,
+.more .usefull-links{
+    margin-bottom: 25px;
+}
+
+.more .formations a,
+.more .usefull-links a,
+.more .school a{
+    color: #ccc;
+    transition: all 0.2s ease;
+}
+
+.more .formations a:hover,
+.more .usefull-links a:hover,
+.more .school a:hover{
+    color: var(--hetic-color);
+}
+
+
+.brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Taille du logo */
+.footer-logo{
+    margin: 10px 0 5px 0;
+    width: 94px;
+    height: 34px;
+}
+
+.footer-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Position du Copyright */
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+/* Taille du texte */
+.copyright-text{
+    font-size: 13px;
+    color: #85879c;
+}
+
+@media screen and (min-width: 800px){
+    /* Texte d'accueil centré verticalement */
+    .contact-us{
+        top: calc(50% - calc(220px / 2));
+    }
+
+    /* Titre du texte d'accueil */
+    .contact-us h1{
+        margin-bottom: 10px;
+        font-size: 45px;
+    }
+
+    /* Paragraphe du texte d'accueil */
+    .contact-us p{
+        font-size: 24px;
+        max-width: 50%;
+    }
+
+    /* Titre du formulaire */
+    .formulaire .title{
+        width: 350px;
+    }
+
+    /* Texte du titre */
+    .title h2{
+        font-size: 45px;
+    }
+
+    .social-medias a{
+        margin-left: 3%;
+    }
+    
+    /* Taille du formulaire */
+    .form{
+        padding: 0 75px;
+    }
+
+    .input-flex{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .raw1,
+    .raw2{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .raw1 div,
+    .raw2 div,
+    .form-other div{
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .second-input{
+        margin-left: 10px;
+    }
+
+    /* Style des input et textarea */
+    form .text{
+        padding-left: 15px;
+    }
+
+    /* petite modification sur le textarea */
+    form textarea.text{
+        padding-top: 15px;
+    }
+
+    form .flex{
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    /* Barre de navigation */
+    header{
+        box-shadow: none;
+    }
+
+    header .logo{
+        width: 50%;
+        justify-content: center;
+    }
+
+    header .logo-size{
+        margin-left: 0;
+    }
+
+    .content{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* Paragraphe du texte d'accueil */
+    .contact-us p{
+        max-width: 80%;
+    }
+
+    .web-school p{
+        margin: 20px 0;
+    }
+
+    .social-medias a{
+        margin-left: 2%;
+    }
+
+    .welcome,
+    .formulaire{
+        width: 50%;
+    }
+
+    .hetic-card{
+        position: absolute;
+        top: 0;
+        padding-top: 30px;
+        left: 50%;
+        width: 100px;
+        height: 200px;
+    }
+
+    .hetic-card .card1,
+    .hetic-card .card2{
+        border: solid #d7e0ef 1px;
+        width: 70px;
+        height: 70px;
+        background: center / cover url("assets/logo-hetic.jpg");
+        position: absolute;
+    }
+
+    .hetic-card .card1{
+        transform: rotate(27deg);
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    .hetic-card .card2{
+        top: 95px;
+        z-index: 1;
+        transform: rotate(50deg);
+    }
+
+    .formulaire{
+        padding-bottom: 0;
+    }
+
+    /* Titre du formulaire */
+    .formulaire .title{
+        width: 100%;
+    }
+
+    .list{
+        flex-direction: row-reverse;
+        position: relative;
+    }
+
+    .more{
+        flex-direction: row-reverse;
+        align-items: center;
+        text-align: left;
+    }
+
+    /* Style des sections de liens */
+    .more .formations,
+    .more .usefull-links{
+        margin-bottom: 0;
+    }
+
+    .more h3 {
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .more ul{
+        margin: 0 75px 0 0;
+    }
+
+    .more .school{
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+
+    .brand{
+        position: absolute;
+        align-items: flex-start;
+        top: 0;
+        left: 0;
+    }
+
+    /* Ligne de séparation */
+    .footer-content .line{
+        width: 70%;
+        margin-top: 40px;
+    }
+}
+
+@keyframes filter{
+    from {
+        background-color: #fff;
+    }
+
+    to {
+        width: 100%;
+    }
+}
