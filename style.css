@@ -537,14 +537,15 @@ footer{
 
     .hetic-card .card1{
         transform: rotate(27deg);
-        z-index: 2;
+        z-index: 1;
         overflow: hidden;
     }
 
     .hetic-card .card2{
         top: 95px;
-        z-index: 1;
-        transform: rotate(50deg);
+        left: -10px;
+        z-index: -1;
+        transform: rotate(55deg);
     }
 
     .formulaire{
