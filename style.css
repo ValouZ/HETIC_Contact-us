@@ -244,8 +244,7 @@
     
     .label-animation {
         animation: labelAppears 1s forwards cubic-bezier(.07, .78, .37, .98);
-        background-color: white;
-        animation-delay: 0.4s;
+        animation-delay: 0.2s;
     }
     
     .raw1 div .text:focus~.label-content,
@@ -610,9 +609,12 @@
         30% {
             color: #00ca91;
         }
+        99% {
+            background: none;
+        }
         100% {
             transform: translateX(0);
             opacity: 1;
-            background: none;
+            background: white;
         }
     }
