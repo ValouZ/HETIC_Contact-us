@@ -238,8 +238,14 @@
         left: 3%;
         height: 20px;
         color: #b1bccf;
-        background-color: white;
         transition: all 0.1s ease;
+        opacity: 0;
+    }
+    
+    .label-animation {
+        animation: labelAppears 1s forwards cubic-bezier(.07, .78, .37, .98);
+        background-color: white;
+        animation-delay: 0.4s;
     }
     
     .raw1 div .text:focus~.label-content,
@@ -594,16 +600,19 @@
         }
     }
     
-    @keyframes menuAppears {
+    @keyframes labelAppears {
         0% {
-            transform: translateX(-150px);
+            transform: translateX(-100px);
+            color: #00ca91;
             opacity: 0;
+            background: none;
         }
-        50% {
-            opacity: 0;
+        30% {
+            color: #00ca91;
         }
         100% {
             transform: translateX(0);
             opacity: 1;
+            background: none;
         }
     }
