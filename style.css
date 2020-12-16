@@ -235,11 +235,11 @@ form {
     color: #54688b;
 }
 
+.text:hover{
+    border: solid 1.5px var(--hetic-color);
+}
+
 .text:not(:focus):valid~label {
-    /* background-color: rgba(0, 0, 0, 0);
-transform: translateY(-20px)  translateX(-75px);
-opacity: 0;
-font-size: 5px; */
     transition: all 0.3s ease;
     font-size: 12px;
     top: -7px;
